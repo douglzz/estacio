@@ -22,6 +22,10 @@ int main(){
   float pib2;
   int pt2; //pontos turísticos
 
+  //--------------------------//
+
+  float d_populacional1, pp_capita1, d_populacional2, pp_capita2;
+
   //------------------------------------//
 
   printf("\n//-------carta 1--------//\n");
@@ -38,7 +42,7 @@ int main(){
   printf("Digite a População: ");
   scanf("%d", &populacao1);
 
-  printf("Digite a Area (m²): ");
+  printf("Digite a Area (km²): ");
   scanf("%f", &area1);
 
   printf("Digite o PIB: ");
@@ -46,8 +50,7 @@ int main(){
   
   printf("Quantos Pontos Turisticos: ");
   scanf("%d", &pt1);
-  printf("\n//-------carta 1--------//\n");
-  
+  printf("//-------carta 1--------//\n");
 
   //---------------------------------//
 
@@ -65,7 +68,7 @@ int main(){
   printf("Digite a População: ");
   scanf("%d", &populacao2);
 
-  printf("Digite a Area (m²): ");
+  printf("Digite a Area (km²): ");
   scanf("%f", &area2);
 
   printf("Digite o PIB: ");
@@ -78,11 +81,22 @@ int main(){
   //-------------- RESULTADO --------------//
 
   printf("\nResultado da Primeira Carta\n");
-  printf("Estado: %s\nCodigo: %s\nCidade: %s\nPopulação: %d\nArea: %f\nPIB: %f\nPontos Turisticos: %d\n \n", estado1, codigo1, cidade1, populacao1, area1, pib1, pt1);
+  printf("Estado: %s\nCodigo: %s\nCidade: %s\nPopulação: %d\nArea: %.3f\nPIB: %.3f\nPontos Turisticos: %d\n \n", estado1, codigo1, cidade1, populacao1, area1, pib1, pt1);
+
+  d_populacional1 = populacao1 / area1; // calculando a densidade populacional
+  pp_capita1 = pib1 / populacao1; // calculando o pib per capita
+
+  printf("Densidade Populacional: %.2f\n", d_populacional1);
+  printf("PIB Per Capita: %.2f\n \n", pp_capita1);
 
   printf("Resultado da Segunda Carta\n");
-  printf("Estado: %s\nCodigo: %s\nCidade: %s\nPopulação: %d\nArea: %f\nPIB: %f\nPontos Turisticos: %d", estado2, codigo2, cidade2, populacao2, area2, pib2, pt2);
+  printf("Estado: %s\nCodigo: %s\nCidade: %s\nPopulação: %d\nArea: %.3f\nPIB: %.3f\nPontos Turisticos: %d\n \n", estado2, codigo2, cidade2, populacao2, area2, pib2, pt2);
 
+  d_populacional2 = populacao2 / area2; // calculando a densidade populacional
+  pp_capita2 = pib2 / populacao2; // calculando o pib per capita
+
+  printf("Densidade Populacional: %.2f\n", d_populacional2);
+  printf("PIB Per Capita: %.2f\n \n", pp_capita2);
 
   return 0;
 } 
