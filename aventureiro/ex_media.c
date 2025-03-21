@@ -18,6 +18,7 @@ int main(){
 
   printf("\n----- RESULTADOS -----\n \n");
 
+  //conversão de tipo usando cast
   media = (float)(nota1 + nota2 + nota3) / 3;
   soma = nota1 + nota2 + nota3;
 
