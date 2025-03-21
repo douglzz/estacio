@@ -26,7 +26,8 @@ int main(){
 
   //--------------------------//
 
-  float d_populacional1, pp_capita1, d_populacional2, pp_capita2;
+  //variaveis sobre a densidade e pib
+  float d_populacional1, pp_capita1, d_populacional2, pp_capita2, dp_inverso1, dp_inverso2;
 
   //------------------------------------//
 
@@ -83,9 +84,11 @@ int main(){
 
   d_populacional1 = populacao1 / area1; // calculando a densidade populacional
   pp_capita1 = pib1 / populacao1; // calculando o pib per capita
+  dp_inverso1 = 1 / d_populacional1;
   
   d_populacional2 = populacao2 / area2; // calculando a densidade populacional
   pp_capita2 = pib2 / populacao2; // calculando o pib per capita
+  dp_inverso2 = 1 / d_populacional2;
 
   printf("%d", d_populacional1 < d_populacional2);
 
@@ -133,7 +136,7 @@ int main(){
   printf("Área: Carta 1 venceu (%d)\n", area1 > area2);
   printf("PIB: Carta 1 venceu (%d)\n", pib1 > pib2);
   printf("Pontos Turísticos: Carta 1 venceu (%d)\n", pt1 > pt2);
-  printf("Densidade Populacional: Carta 1 venceu (%d)\n", d_populacional1 < d_populacional2);
+  printf("Densidade Populacional: Carta 1 venceu (%d)\n", dp_inverso1 > dp_inverso2);
   printf("PIB Per Capita: Carta 1 venceu (%d)\n", pp_capita1 > pp_capita2);
   printf("Super Poderes: Carta 1 venceu (%d)\n", (int) superpower1 > superpower2);
   
