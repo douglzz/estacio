@@ -84,11 +84,13 @@ int main(){
 
   d_populacional1 = populacao1 / area1; // calculando a densidade populacional
   pp_capita1 = pib1 / populacao1; // calculando o pib per capita
-  dp_inverso1 = 1 / d_populacional1;
+  dp_inverso1 = 1 / d_populacional1; // inverso da densidade populacional
+
+  // mais repetidos
   
-  d_populacional2 = populacao2 / area2; // calculando a densidade populacional
-  pp_capita2 = pib2 / populacao2; // calculando o pib per capita
-  dp_inverso2 = 1 / d_populacional2;
+  d_populacional2 = populacao2 / area2;
+  pp_capita2 = pib2 / populacao2; 
+  dp_inverso2 = 1 / d_populacional2; 
 
   printf("%d", d_populacional1 < d_populacional2);
 
