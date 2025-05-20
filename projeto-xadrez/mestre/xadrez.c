@@ -22,14 +22,14 @@ void moverBispo(int casas)
     }
 }
 
-void moverRainha(int casas) {
+void moverRainha(int casas)
+{
     if (casas > 0)
     {
         moverRainha(casas - 1);
         printf("Esquerda \n");
         return;
     }
-    
 }
 
 int main()
@@ -45,10 +45,10 @@ int main()
     printf("[2] Bispo\n");
     printf("[3] Rainha\n");
     printf("[4] Cavalo\n");
-    
+
     printf("> ");
     scanf("%d", &pecas);
-    
+
     if (pecas == 1)
     {
         // movimentação da torre
@@ -57,37 +57,42 @@ int main()
         printf(">-- Torre --<\n");
         moverTorre(casas);
         return 0;
-
-    } else if (pecas == 2) {
+    }
+    else if (pecas == 2)
+    {
         // movimentação do bispo
         for (casas; casas > 0; casas--)
         {
-        printf("\nQuantas casas deseja mover o bispo: ");
+            printf("\nQuantas casas deseja mover o bispo: ");
+            scanf("%d", &casas);
+            printf(">-- Bispo --<\n");
+            moverBispo(casas);
+            return 0;
+        }
+    }
+    else if (pecas == 3)
+    {
+        printf("\nQuantas casas deseja mover a rainha: ");
         scanf("%d", &casas);
-        printf(">-- Bispo --<\n");
-        moverBispo(casas);
+        printf(">-- rainha --<\n");
+        moverRainha(casas);
         return 0;
     }
-    
-} else if (pecas == 3) {
-    printf("\nQuantas casas deseja mover a rainha: ");
-    scanf("%d", &casas);
-    printf(">-- rainha --<\n");
-    moverRainha(casas);
-    return 0;
-    
-} else if (pecas == 4) {
-    printf("\n>-- Cavalo --<\n");
-    int movimentoCompleto = 1;
-    while (movimentoCompleto--)
+    else if (pecas == 4)
     {
-        for (int direcao = 0; direcao < 2; direcao++)
+        printf("\n>-- Cavalo --<\n");
+        int movimentoCompleto = 1;
+        while (movimentoCompleto--)
         {
-            printf("cima\n");
+            for (int direcao = 0; direcao < 2; direcao++)
+            {
+                printf("cima\n");
+            }
+            printf("direita\n");
         }
-        printf("direita\n");
     }
-    } else {
+    else
+    {
         printf("valor invalido!");
     }
-    }
+}
