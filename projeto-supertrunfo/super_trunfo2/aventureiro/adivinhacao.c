@@ -24,7 +24,7 @@ int main(){
     
     if (palpite == numeroSecreto) {
       printf("Parabéns você acertou!!!\nO numero secreto era: %d", numeroSecreto);
-    } else if {
+    } else {
       printf("Você errou...\nO numero secreto era: %d", numeroSecreto);
     }
   break;
